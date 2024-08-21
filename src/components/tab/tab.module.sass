@@ -1,0 +1,35 @@
+
+@import 'src/styles/_variables.sass'
+
+.tab
+    background-color: transparent
+    color: $neutral-600
+    border: none
+    padding: 10px 20px
+    cursor: pointer
+    transition: color 0.3s
+    margin-right: 10px
+    position: relative
+
+    &::after 
+        content: ''
+        display: block
+        width: 0
+        height: 2px
+        background: $primary-500
+        transition: width 0.3s
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+
+.tab__active 
+  color: $primary-500
+
+.tab__active
+    &::after
+        width: 100%
+
+.tab__disabled 
+  color: $neutral-400
+  cursor: not-allowed

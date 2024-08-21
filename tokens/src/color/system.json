@@ -1,0 +1,14 @@
+{
+  "color": {
+    "system": {
+      "successDark": { "value": "{color.lutuna.success.700.value}" },
+      "successLight": { "value": "{color.lutuna.success.100.value}" },
+      "warnDark": { "value": "{color.lutuna.warning.700.value}" },
+      "warnLight": { "value": "{color.lutuna.warning.100.value}" },
+      "infoDark": { "value": "{color.lutuna.info.800.value}" },
+      "infoLight": { "value": "{color.lutuna.info.100.value}" },
+      "errorDark": { "value": "{color.lutuna.danger.700.value}" },
+      "errorLight": { "value": "{color.lutuna.danger.100.value}" }
+    }
+  }
+}

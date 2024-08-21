@@ -1,0 +1,10 @@
+{
+  "color": {
+    "theme": {
+      "primary": { "value": "{color.lutuna.primary.default.value}" },
+      "secondary": { "value": "{color.lutuna.secondary.default.value}" },
+      "tertiary": { "value": "{color.lutuna.tertiary.default.value}" },
+      "link": { "value": "{color.theme.secondary.value}" }
+    }
+  }
+}

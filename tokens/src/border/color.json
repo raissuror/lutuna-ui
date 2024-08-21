@@ -1,0 +1,9 @@
+{
+  "border": {
+    "color": {
+      "primary": { "value": "{color.lutuna.primary.600.value}" },
+      "light": { "value": "{color.lutuna.neutral.200.value}" },
+      "default": { "value": "{color.lutuna.neutral.300.value}" }
+    }
+  }
+}

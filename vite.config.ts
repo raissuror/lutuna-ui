@@ -11,14 +11,14 @@ export default defineConfig({
   plugins: [
     react(), 
     dts(),
-    libInjectCss()
+    libInjectCss(),
   ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
-      name: 'library-example',
+      name: 'lutuna-ui',
       formats: ['es'],
-      fileName: 'library-example',
+      fileName: 'lutuna-ui',
     },
     rollupOptions: {
       external: ['react', 'react-jsx-runtime'],
@@ -36,5 +36,5 @@ export default defineConfig({
         entryFileNames: '[name].js'
       }
     },
-  },
+  }
 })

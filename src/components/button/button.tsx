@@ -5,6 +5,11 @@ type ButtonProps = Readonly<{
 }>;
 
 export function Button(props: ButtonProps) {
-    return <button className={styles.button}>{props.children}</button>
+    return (
+        <button className={styles["button"]}>
+            <span className={styles["button__content"]}>
+                {props.children}
+            </span>
+        </button>
+    )
 }
-    

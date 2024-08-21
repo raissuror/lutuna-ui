@@ -1,0 +1,73 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { color } from "dist/tokens/js/manifest";
+import TokenTable, { toTokenRows } from "helpers/TokenTable";
+
+<Meta title="Design Tokens/Color" />
+
+# Color Tokens
+
+## Narmi Base Colors
+
+<Story name="Base">
+  <TokenTable
+    previewType="color"
+    rows={toTokenRows(color, "narmi").filter(({ name }) => {
+      // filter out offset brand colors (e.g. `moss100`) from documentation for now
+      const isOffsetColor = new RegExp(/[0-9]/).test(name);
+      return !isOffsetColor;
+    })}
+  />
+</Story>
+
+## Theme Colors
+
+Tokens with the prefix `--theme` are dedicated to theming. These CSS custom
+properties are intended to be overridden by institution settings.
+
+<Story name="Theme">
+  <TokenTable previewType="color" rows={toTokenRows(color, "theme")} />
+</Story>
+
+### Enabling theming in your application
+
+To set the value of these theming variables, redeclare theme custom properties
+in your application _after_ the design system styleheet link.
+
+You will need to declare both full values and RGB list values, which are used by
+this design system for composing transparent colors:
+
+```html
+<link rel="stylesheet" href="<design system style.css url>" />
+<style type="text/css">
+  /* your theming overrides */
+  :root {
+    --theme-primary: red;
+    --theme-secondary: yellow;
+    --theme-rgb-primary: 255, 0, 0;
+    --theme-rgb-secondary: 255, 255, 0;
+  }
+</style>
+```
+
+## Background Colors
+
+Colors reserved for element backgrounds.
+
+<Story name="Background">
+  <TokenTable previewType="color" rows={toTokenRows(color, "background")} />
+</Story>
+
+## System Colors
+
+Colors used for system messages and indicators.
+
+<Story name="System">
+  <TokenTable previewType="color" rows={toTokenRows(color, "system")} />
+</Story>
+
+### Usage
+
+```
+background-color: rgba(var(--rgb-pine), var(--alpha-10));
+color: rgba(var(--theme-rgb-primary), var(--alpha-20));
+```

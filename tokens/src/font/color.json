@@ -1,0 +1,11 @@
+{
+  "font": {
+    "color": {
+      "heading": { "value": "{color.lutuna.neutral.900.value}" },
+      "primary": { "value": "{color.lutuna.primary.800.value}" },
+      "secondary": { "value": "{color.lutuna.secondary.800.value}" },
+      "default": { "value": "{color.lutuna.neutral.800.value}" },
+      "hint": { "value": "{color.lutuna.neutral.100.value}" }
+    }
+  }
+}

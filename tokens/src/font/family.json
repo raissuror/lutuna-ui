@@ -1,0 +1,9 @@
+{
+  "font": {
+    "family": {
+      "heading": { "value": "'Karla', sans-serif" },
+      "body": { "value": "Lato, system-ui" },
+      "default": { "value": "{font.family.body.value}" }
+    }
+  }
+}
